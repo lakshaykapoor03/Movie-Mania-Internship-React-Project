@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactRouter from "./ReactRouter";
+import { BrowserRouter } from "react-router-dom";
+import Header from "./components/Header";
+import SimpleBottomNavigation from "./components/MainNav";
+// import axios from "axios";
+
+
+// function Trending() {
+//   const fetchTrending= async()=>{
+//   const {data}= await axios.get("https://api.themoviedb.org/3/movie/550?api_key=ad42d50c0ab12bbf3d9862002e45562c")
+//   console.log(data)
+// }
+// fetchTrending()
+// }
+
+// Trending()
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <BrowserRouter>
+        <ReactRouter />
+      <SimpleBottomNavigation />
+      </BrowserRouter>
     </div>
   );
 }
