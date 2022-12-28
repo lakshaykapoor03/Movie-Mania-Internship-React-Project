@@ -13,12 +13,13 @@ function Movies() {
   const[selectedGenres, setSelectedGenres]= useState([])
   const[genres, setGenres] = useState([])
   const genreforURL= useGenre(selectedGenres)
+  const apiKey = "ad42d50c0ab12bbf3d9862002e45562c";
 
 
 
   const fetchMovies = async () => {
     const movieData = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?api_key=ad42d50c0ab12bbf3d9862002e45562c&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page= ${page}&with_genres=${genreforURL}`
+     ` https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreforURL}`
     );
     console.log(movieData.data.results);
     setContent(movieData.data.results);
@@ -26,6 +27,7 @@ function Movies() {
   };
 
   useEffect(() => {
+    window.scroll(0, 0);
     fetchMovies();
   }, [page,genreforURL]);
   return( 
@@ -37,15 +39,16 @@ function Movies() {
         {content &&
           content.map((c) => (
             <SingleContent
-              key={c.id}
-              id={c.id}
-              poster={c.poster_path}
-              title={c.title || c.name}
-              date={c.release_date}
-              voteAverage={c.vote_average}
-              overView={c.overview}
-              type={c.media_type}
-              voteaverage={c.vote_average}
+            key={c.id}
+            id={c.id}
+            poster={c.poster_path}
+            title={c.title || c.name}
+            date={c.release_date}
+            voteAverage={c.vote_average}
+            overView={c.overview}
+            type={"movie"}
+            voteaverage={c.vote_average}
+
 
             />
           ))}
