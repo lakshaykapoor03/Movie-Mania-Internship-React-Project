@@ -13,6 +13,7 @@ function Trending() {
     );
     console.log(data.results);
     setContent(data.results);
+   
   };
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function Trending() {
   }, [page]);
 
   return (
-    <div className="w-[100%] container mx-auto">
+    <div className="w-[100%] mx-[4%]">
       <div className="text-[white] text-[5vw] text-center">Trending</div>
       <div className=" container mx-[auto] flex flex-wrap gap-[20px] justify-around w-[100%]">
         {content &&

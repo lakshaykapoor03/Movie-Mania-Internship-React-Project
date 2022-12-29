@@ -70,7 +70,7 @@ export default function ContentModal({children, type, id }) {
       >
        {children}
       </Button>
-      <div >
+      <div  >
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -85,7 +85,7 @@ export default function ContentModal({children, type, id }) {
         <Fade in={open}>
           {content && (
         
-              <div className=" md:w-[400px] md:h-[80vh] bg-[#4d4d4d] text-white mt-[100px] md:ml-[600px] text-center overflow-y-scroll ">
+              <div className=" flex flex-col  justify-evenly w-[400px] relative right-[20%]  md:w-[900px]  md:h-[90vh] rounded-[10px] bg-[#4d4d4d] text-white mt-[50px] md:ml-[600px] text-center">
                
                 {/* <img
                 className="portrait"
@@ -96,8 +96,9 @@ export default function ContentModal({children, type, id }) {
                       : unavailable
                   }
                 /> */}
+                <div className="md:flex">
                 <img
-                className=" w-[400px] h-[380px]  object-cover"
+                className=" w-[600px] h-[300px]  md:h-[300px] rounded-[20px]  object-cover"
 
                 alt={content.name || content.title}
                   src={
@@ -106,6 +107,7 @@ export default function ContentModal({children, type, id }) {
                       : unavailable
                   }
                 />
+                <div className="md:flex md:flex-col md:justify-around md:gap-[20px] md:h-[200px] mt-[30px]">
                 <div className="text-white">
                   {content.name|| content.title}
                 </div>
@@ -115,11 +117,14 @@ export default function ContentModal({children, type, id }) {
                 <div>
                   {content.overview}
                 </div>
+                </div>
+                </div>
                 <div>
                   <Carousel type={type} id={id}/>
 
                 </div>
-                <Button
+                <div  >
+                <Button 
                 variant="contained"
                 startIcon={<YouTubeIcon/>}
                 color="secondary"
@@ -127,6 +132,7 @@ export default function ContentModal({children, type, id }) {
                 href={`https://www.youtube.com/watch?v=${video}`}>
                   Watch Trailer
                 </Button>
+                </div>
               </div>
          
           )}

@@ -17,7 +17,7 @@ function CustomPagination({setPage, numOfPages=10}) {
       return (
         <div className=" text-[white] w-[100%] flex justify-center mb-[60px] ">
             <ThemeProvider theme={darkTheme}>
-            <Pagination count={numOfPages} color="primary" hideNextButton hidePrevButton  onChange={(e)=> handlePageChange(e.target)}/>
+            <Pagination count={numOfPages} color="primary" hideNextButton hidePrevButton  onChange={(e)=> handlePageChange(e.target.textContent)}/>
             </ThemeProvider>
             </div>
       )

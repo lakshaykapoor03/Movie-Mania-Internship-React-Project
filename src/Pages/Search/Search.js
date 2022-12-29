@@ -12,6 +12,7 @@ import CustomPagination from "../../components/Pagination/CustomPagination";
 import { WidthWideOutlined } from '@mui/icons-material';
 const apiKey= "ad42d50c0ab12bbf3d9862002e45562c"
 
+
 function Search(){
 
   const [type, setType]= useState(0)
@@ -34,14 +35,13 @@ function Search(){
 
 const fetchSearch=async()=>{
  
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?api_key=ad42d50c0ab12bbf3d9862002e45562c&language=en-US&query=${searchText}&page=${page}`)
+    const { data } = await axios.get( `https://api.themoviedb.org/3/search/${type?"tv":"movie"}?api_key=${apiKey}&language=en-US&query=${searchText}&page=${page}&include_adult=false`
+      )
     setContent(data.results);
     setNumOfPages(data.total_pages);
     console.log(data.results);
 
 }
-
 
 useEffect(() => {
   window.scroll(0,0)
@@ -49,7 +49,7 @@ useEffect(() => {
 }, [page,type]);
 
   return (
-    <div className="text-[white] text-[5vw] text-center">
+    <div className="text-[white] text-[5vw] text-center mx-[4%]">
       <ThemeProvider theme={darkTheme}>
         <div className="flex my-[15px] justify-center">
       <TextField
@@ -72,7 +72,7 @@ useEffect(() => {
         <Tab label="search series"/>
       </Tabs>
       </ThemeProvider>
-      <div className=" container mx-[auto] flex flex-wrap gap-[20px] justify-around w-[100%]">
+      <div className=" container mx-[auto] flex flex-wrap justify-around w-[100%]">
         {content &&
           content.map((c) => (
             <MovieComponent

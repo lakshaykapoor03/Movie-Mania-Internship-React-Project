@@ -30,10 +30,10 @@ function Series() {
   }, [page,genreforURL]);
   return( 
   <>
-  <div className="w-[100%] container mx-auto">
+  <div className="w-[100%] mx-[4%]">
       <div className="text-[white] text-[5vw] text-center">Tv Series</div>
       <Genre type="movie" selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPage={setPage} />
-      <div className=" container mx-[auto] flex flex-wrap gap-[20px] justify-around w-[100%]">
+      <div className=" container mx-[auto] flex flex-wrap justify-around w-[100%]">
         {content &&
           content.map((c) => (
             <SingleContent

@@ -9,7 +9,7 @@ import useGenre from "../../hooks/useGenre"
 function Movies() {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-  const[pages, setNumOfPages] = useState();
+  const[numOfPages, setNumOfPages] = useState();
   const[selectedGenres, setSelectedGenres]= useState([])
   const[genres, setGenres] = useState([])
   const genreforURL= useGenre(selectedGenres)
@@ -32,10 +32,10 @@ function Movies() {
   }, [page,genreforURL]);
   return( 
   <>
-  <div className="w-[100%] container mx-auto">
+  <div className="w-[100%] mx-[4%]">
       <div className="text-[white] text-[5vw] text-center">Movies</div>
       <Genre type="movie" selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPage={setPage} />
-      <div className=" container mx-[auto] flex flex-wrap gap-[20px] justify-around w-[100%]">
+      <div className=" container mx-[auto] flex flex-wrap  justify-around w-[100%]">
         {content &&
           content.map((c) => (
             <SingleContent
@@ -53,7 +53,7 @@ function Movies() {
             />
           ))}
       </div>
-      {pages>1 &&  <CustomPagination setPage={setPage} pages={pages} />}
+      {numOfPages>1 &&  <CustomPagination setPage={setPage} numOfPages={numOfPages} />}
      
 
     </div>

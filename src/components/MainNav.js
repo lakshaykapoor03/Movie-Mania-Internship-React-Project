@@ -35,7 +35,7 @@ export default function SimpleBottomNavigation() {
     },[value])
 
   return (
-    <div className="z-50 w-[100vw] fixed bottom-0 bg-[#4d4d4d]">
+    <div className="z-50 w-[100vw] fixed bottom-0 bg-[blue]">
     <Box sx={{  }}>
       <BottomNavigation
         showLabels
