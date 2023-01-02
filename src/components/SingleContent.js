@@ -5,7 +5,8 @@ import ContentModal from './ContentModal/ContentModal'
 
 const SingleContent=({title, date, poster, type, voteAverage, overview, id} )=> {
   return (
-    <ContentModal type={type} id={id} >
+    <div >
+    <ContentModal className="flex flex-wrap" type={type} id={id} >
     {/* <div className="text-[white] w-[300px] bg-[black]">
       <img className="" src={poster?`${img_300}/${poster}`: unavailable}/>
        <div>{title}</div>
@@ -27,6 +28,7 @@ const SingleContent=({title, date, poster, type, voteAverage, overview, id} )=> 
 
     </div>
         </ContentModal>
+        </div>
         
   )
 }

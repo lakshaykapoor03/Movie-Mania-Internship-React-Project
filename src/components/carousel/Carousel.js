@@ -20,7 +20,7 @@ const [credits, setCredits]= useState()
 
 const items = credits?.map((c)=>(
     <div className="md:flex md:flex-col md:justify-center ">
-        <img  src={c.profile_path? `${img_300}/${c.profile_path}`: unavailable} alt={c.name} onDragStart={handleDragStart} className="flex flex-wrap  lg:w-[100px] self-center  rounded-[15px] md:mt-[30px]" />
+        <img  src={c.profile_path? `${img_300}/${c.profile_path}`: unavailable} alt={c.name} onDragStart={handleDragStart} className="flex flex-wrap w-[80px] ml-[170px] md:ml-[0]  lg:w-[100px] md:self-center  rounded-[15px] md:mt-[30px]" />
         <p className="lg:mt-[30px]">{c?.name}</p>
     </div>
 ))

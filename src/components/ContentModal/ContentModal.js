@@ -85,7 +85,7 @@ export default function ContentModal({children, type, id }) {
         <Fade in={open}>
           {content && (
         
-              <div className=" flex flex-col  justify-evenly w-[400px] relative right-[20%]  md:w-[900px]  md:h-[90vh] rounded-[10px] bg-[#4d4d4d] text-white mt-[50px] md:ml-[600px] text-center">
+              <div className=" flex flex-col  justify-evenly  relative right-[20%]  sm:w-[70vw]  md:h-[90vh] rounded-[10px] bg-[#4d4d4d] text-white mt-[50px] md:ml-[600px] text-center">
                
                 {/* <img
                 className="portrait"
@@ -98,7 +98,7 @@ export default function ContentModal({children, type, id }) {
                 /> */}
                 <div className="md:flex">
                 <img
-                className=" w-[600px] h-[300px]  md:h-[300px] rounded-[20px]  object-cover"
+                className="ml-[45%] h-[200px] md:ml-[0%] self-center  md:h-[300px] rounded-[20px]  object-cover"
 
                 alt={content.name || content.title}
                   src={
@@ -107,11 +107,11 @@ export default function ContentModal({children, type, id }) {
                       : unavailable
                   }
                 />
-                <div className="md:flex md:flex-col md:justify-around md:gap-[20px] md:h-[200px] mt-[30px]">
+                <div className="md:flex md:flex-col md:justify-around md:gap-[20px] text-[14px] md:text-[20px]  md:h-[200px] mt-[30px]">
                 <div className="text-white">
                   {content.name|| content.title}
                 </div>
-                <div>
+                <div className="text-center">
                   {content.tagline && (<i>{content.tagline}</i>)}
                 </div>
                 <div>

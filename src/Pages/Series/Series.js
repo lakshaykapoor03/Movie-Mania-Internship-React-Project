@@ -9,7 +9,7 @@ import useGenre from "../../hooks/useGenre"
 function Series() {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
-  const[pages, setNumOfPages] = useState();
+  const[numOfPages, setNumOfPages] = useState();
   const[selectedGenres, setSelectedGenres]= useState([])
   const[genres, setGenres] = useState([])
   const genreforURL= useGenre(selectedGenres)
@@ -50,7 +50,7 @@ function Series() {
             />
           ))}
       </div>
-      {pages>1 &&  <CustomPagination setPage={setPage} pages={pages} />}
+      {numOfPages>1 &&  <CustomPagination setPage={setPage} numOfPages={numOfPages} />}
      
 
     </div>
