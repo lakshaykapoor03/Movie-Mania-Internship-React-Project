@@ -3,7 +3,9 @@ import axios from "axios";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 import SingleContent from "../../components/SingleContent";
 import Genre from "../../components/Genre";
-import useGenre from "../../hooks/useGenre"
+import useGenre from "../../hooks/useGenre";
+import Shimmer from "../../components/Shimmer";
+
 
 
 function Movies() {
@@ -30,6 +32,14 @@ function Movies() {
     window.scroll(0, 0);
     fetchMovies();
   }, [page,genreforURL]);
+
+  {if(content.length===0){
+    return(
+    <Shimmer/>
+    )
+  }}
+
+
   return( 
   <>
   <div className="w-[100%] mx-[4%]">

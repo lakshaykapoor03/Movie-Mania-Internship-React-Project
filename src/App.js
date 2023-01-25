@@ -3,8 +3,8 @@ import ReactRouter from "./ReactRouter";
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import SimpleBottomNavigation from "./components/MainNav";
+import Shimmer from "./components/Shimmer";
 // import axios from "axios";
-
 
 // function Trending() {
 //   const fetchTrending= async()=>{
@@ -22,7 +22,7 @@ function App() {
       <Header />
       <BrowserRouter>
         <ReactRouter />
-      <SimpleBottomNavigation />
+        <SimpleBottomNavigation />
       </BrowserRouter>
     </div>
   );

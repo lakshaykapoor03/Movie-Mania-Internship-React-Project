@@ -2,6 +2,8 @@ import { React, useState, useEffect } from "react";
 import axios from "axios";
 import SingleContent from "../../components/SingleContent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
+import { ResetTvRounded } from "@mui/icons-material";
+import Shimmer from "../../components/Shimmer";
 
 function Trending() {
   const[page, setPage] = useState(1);
@@ -20,6 +22,12 @@ function Trending() {
     window.scroll(0,0)
     fetchTrending();
   }, [page]);
+
+  {if(content.length===0){
+    return(
+    <Shimmer/>
+    )
+  }}
 
   return (
     <div className="w-[100%] mx-[4%]">

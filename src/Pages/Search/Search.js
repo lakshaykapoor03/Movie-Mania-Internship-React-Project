@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import SearchIcon from '@mui/icons-material/Search';
 import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
+import SingleContent from '../../components/SingleContent';
 import axios from 'axios';
 import MovieComponent from "../../components/MovieComponent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
@@ -75,7 +76,7 @@ useEffect(() => {
       <div className=" container mx-[auto] flex flex-wrap justify-around w-[100%]">
         {content &&
           content.map((c) => (
-            <MovieComponent
+            <SingleContent
             key={c.id}
             id={c.id}
             poster={c.poster_path}

@@ -19,9 +19,12 @@ const Carousel = ({type, id}) => {
 const [credits, setCredits]= useState()
 
 const items = credits?.map((c)=>(
-    <div className="md:flex md:flex-col md:justify-center ">
-        <img  src={c.profile_path? `${img_300}/${c.profile_path}`: unavailable} alt={c.name} onDragStart={handleDragStart} className="flex flex-wrap w-[80px] ml-[170px] md:ml-[0]  lg:w-[100px] md:self-center  rounded-[15px] md:mt-[30px]" />
-        <p className="lg:mt-[30px]">{c?.name}</p>
+    <div className="flex flex-col gap-[20px] ">
+    
+  
+
+        <img  src={c.profile_path? `${img_300}/${c.profile_path}`: unavailable} alt={c.name} onDragStart={handleDragStart} className="flex ml-[115px] w-[80px] ml-[100px] sm:ml-[210px] md:ml-[0]  lg:w-[100px] md:self-center  rounded-[15px] md:mt-[30px]" />
+        <p className=" text-center text-white">{c?.name}</p>
     </div>
 ))
 
@@ -38,8 +41,9 @@ useEffect(() => {
   }, []);
 
   return (
-    <AliceCarousel autoPlay infinite  disableDotsControls disableButtonsControls mouseTracking items={items} />
+    <AliceCarousel autoPlay infinite disableDotsControls disableButtonsControls mouseTracking items={items} />
   );
 }
 
 export default Carousel;
+

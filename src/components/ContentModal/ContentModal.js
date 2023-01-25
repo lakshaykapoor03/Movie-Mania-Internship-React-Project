@@ -65,7 +65,7 @@ export default function ContentModal({children, type, id }) {
     <div >
   
       <Button
-        className="className='border-none rounded-[10px] sm: w-[225px]  md:w-[300px] md:h-[450px] lg:h-[450px] border-[2px] bg-[black] text-[white] text-center pt-[10px]   hover:bg-[white] duration-300 hover:text-[black]"
+        className="border-none rounded-[10px] sm: w-[225px]  md:w-[300px] md:h-[450px] lg:h-[450px] border-[2px] bg-[black] text-[white] text-center pt-[10px]   hover:bg-[white] duration-300 hover:text-[black]"
         onClick={handleOpen}
       >
        {children}
@@ -85,7 +85,7 @@ export default function ContentModal({children, type, id }) {
         <Fade in={open}>
           {content && (
         
-              <div className=" flex flex-col  justify-evenly  relative right-[20%]  sm:w-[70vw]  md:h-[90vh] rounded-[10px] bg-[#4d4d4d] text-white mt-[50px] md:ml-[600px] text-center">
+              <div className="opacity-100 w-[300px] h-[650px] bg-[#fff] rounded-[20px] mx-[10vw] my-[60px] sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px]">
                
                 {/* <img
                 className="portrait"
@@ -98,7 +98,7 @@ export default function ContentModal({children, type, id }) {
                 /> */}
                 <div className="md:flex">
                 <img
-                className="ml-[45%] h-[200px] md:ml-[0%] self-center  md:h-[300px] rounded-[20px]  object-cover"
+                className="ml-[30%] h-[200px] md:ml-[0%] self-center  md:h-[300px] rounded-[20px]  object-cover"
 
                 alt={content.name || content.title}
                   src={
@@ -107,8 +107,8 @@ export default function ContentModal({children, type, id }) {
                       : unavailable
                   }
                 />
-                <div className="md:flex md:flex-col md:justify-around md:gap-[20px] text-[14px] md:text-[20px]  md:h-[200px] mt-[30px]">
-                <div className="text-white">
+                <div className="flex flex-col justify-around text-center gap-[20px]  text-[14px] sm:text-[15px] md:text-[20px] lg:text-[22px] md:h-[200px] mt-[30px]">
+                <div className="">
                   {content.name|| content.title}
                 </div>
                 <div className="text-center">
@@ -119,11 +119,11 @@ export default function ContentModal({children, type, id }) {
                 </div>
                 </div>
                 </div>
-                <div>
+                <div className="flex self-auto">
                   <Carousel type={type} id={id}/>
 
                 </div>
-                <div  >
+                <div className="ml-[25%] sm:ml-[46%] mt-[30px] sm:ml-[35%]" >
                 <Button 
                 variant="contained"
                 startIcon={<YouTubeIcon/>}
