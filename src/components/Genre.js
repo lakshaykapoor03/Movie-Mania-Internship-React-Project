@@ -41,7 +41,7 @@ const Genre = ({
   }, []);
 
   return (
-    <div className="flex flex-wrap py-[20px] ml-[30px] flex gap-[5px]">
+    <div className="flex flex-wrap  py-[20px] flex gap-[5px]">
       {selectedGenres.map((genre, idx) => (
           <Chip key={genre.id} label={genre.name} color="primary" clickable  onDelete={() => handleRemove(genre)} />
         ))}

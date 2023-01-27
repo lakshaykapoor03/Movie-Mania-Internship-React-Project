@@ -6,7 +6,7 @@ import ContentModal from './ContentModal/ContentModal'
 const SingleContent=({title, date, poster, type, voteAverage, overview, id} )=> {
   return (
     <div >
-    <ContentModal className="flex flex-wrap" type={type} id={id} >
+    <ContentModal className="flex flex-wrap basis-1/4 md:basis-1/3" type={type} id={id} >
   
     {/* <div className="text-[white] w-[300px] bg-[black]">
       <img className="" src={poster?`${img_300}/${poster}`: unavailable}/>

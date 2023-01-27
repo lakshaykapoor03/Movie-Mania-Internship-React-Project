@@ -28,6 +28,18 @@ const items = credits?.map((c)=>(
     </div>
 ))
 
+const responsive={
+  0:{
+    items:3,
+  },
+  512:{
+    items:5
+  },
+  1024:{
+    items:7,
+  }
+};
+
 const fetchCredits=async()=>{
 const response= await axios.get(`https://api.themoviedb.org/3/${type}/${id}/credits?api_key=${apiKey}&language=en-US`)
 console.log(response)
@@ -41,7 +53,7 @@ useEffect(() => {
   }, []);
 
   return (
-    <AliceCarousel autoPlay infinite disableDotsControls disableButtonsControls mouseTracking items={items} />
+    <AliceCarousel autoPlay infinite responsive={responsive} disableDotsControls disableButtonsControls mouseTracking items={items} />
   );
 }
 
