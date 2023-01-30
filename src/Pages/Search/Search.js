@@ -50,7 +50,8 @@ useEffect(() => {
 }, [page,type]);
 
   return (
-    <div className="text-[white] text-[5vw] text-center mx-[4%]">
+    <div className="bg-[4d4d4d]">
+    <div className="text-[white] text-[5vw] text-center bg-[#4d4d4d]">
       <ThemeProvider theme={darkTheme}>
         <div className="flex my-[15px] justify-center">
       <TextField
@@ -58,7 +59,7 @@ useEffect(() => {
       className="searchBox"
       label="Search"
       variant="filled"
-      color="primary"
+      
       onChange={(e)=>setSearchText(e.target.value)}
       >
 
@@ -84,7 +85,7 @@ useEffect(() => {
             date={c.release_date}
             voteAverage={c.vote_average}
             overView={c.overview}
-            type={c.media_type}
+            type={"movie"||"tv"}
             voteaverage={c.vote_average}
 
             />
@@ -100,6 +101,7 @@ useEffect(() => {
      
 
     </div>
+ </div>
      
   )
 }

@@ -45,7 +45,7 @@ export default function ContentModal({children, type, id }) {
       `https://api.themoviedb.org/3/${type}/${id}?api_key=${apiKey}&language=en-US`
     );
     // console.log(data.data);
-    setContent(data.data);
+    setContent(data?.data);
   };
 
   const fetchVideo = async () => {
@@ -53,7 +53,7 @@ export default function ContentModal({children, type, id }) {
       `https://api.themoviedb.org/3/${type}/${id}/videos?api_key=${apiKey}&language=en-US`
     );
     // console.log(data.data);
-    setVideo(data.data.results[0]?.key);
+    setVideo(data?.data?.results[0]?.key);
   };
 
   useEffect(() => {
@@ -85,7 +85,7 @@ export default function ContentModal({children, type, id }) {
         <Fade in={open}>
           {content && (
         
-              <div className="opacity-100 w-[300px] h-[650px] bg-[#fff] rounded-[20px] mx-[10vw] my-[60px] sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px]">
+              <div className="opacity-100 w-[300px] h-[650px] bg-[#444] text-[#fff] rounded-[20px] mx-[10vw] my-[60px] sm:w-[500px] md:w-[700px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[1400px]">
                
                 {/* <img
                 className="portrait"
@@ -123,11 +123,11 @@ export default function ContentModal({children, type, id }) {
                   <Carousel type={type} id={id}/>
 
                 </div>
-                <div className="ml-[25%] sm:ml-[46%] mt-[30px] sm:ml-[35%]" >
+                <div className="flex items-center sm:ml-[46%] mt-[30px] sm:ml-[35%]" >
                 <Button 
                 variant="contained"
                 startIcon={<YouTubeIcon/>}
-                color="secondary"
+                style={{color:"white", backgroundColor:"#920000"}}
                 target="_blank"
                 href={`https://www.youtube.com/watch?v=${video}`}>
                   Watch Trailer

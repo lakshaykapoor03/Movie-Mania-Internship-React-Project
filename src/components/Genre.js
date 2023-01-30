@@ -41,13 +41,13 @@ const Genre = ({
   }, []);
 
   return (
-    <div className="flex flex-wrap  py-[20px] flex gap-[5px]">
+    <div className="flex flex-wrap justify-center  py-[20px]  gap-[5px]">
       {selectedGenres.map((genre, idx) => (
-          <Chip key={genre.id} label={genre.name} color="primary" clickable  onDelete={() => handleRemove(genre)} />
+          <Chip key={genre.id} label={genre.name} style={{color:"white", backgroundColor:"#920000"}} clickable  onDelete={() => handleRemove(genre)} />
         ))}
       {genres &&
         genres.map((genre, idx) => (
-          <Chip key={genre.id} label={genre.name} clickable  onClick={() => handleAdd(genre)} />
+          <Chip key={genre.id} label={genre.name} clickable style={{color:"white", backgroundColor:"#4d4d4d"}} onClick={() => handleAdd(genre)} />
         ))}
     </div>
   );

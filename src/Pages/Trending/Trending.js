@@ -30,9 +30,9 @@ function Trending() {
   }}
 
   return (
-    <div className="w-[100%] mx-[4%]">
+    <div className="w-[100%]  bg-[#333333]">
       <div className="text-[white] text-[5vw] text-center">Trending</div>
-      <div className=" container mx-[auto] flex flex-wrap gap-[20px] justify-around w-[100%]">
+      <div className="  flex flex-wrap gap-[20px] justify-around w-[100%]">
         {content &&
           content.map((c) => (
             <SingleContent

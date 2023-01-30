@@ -38,23 +38,26 @@ export default function SimpleBottomNavigation() {
   useEffect(() => {}, [value]);
 
   return (
-    <div className="z-50 w-[100vw] h-[50px] fixed bottom-0 bg-[white] text-[#000]">
+    <div className="z-50 w-[100vw] h-[50px] fixed bottom-0 bg-[#000] text-[#000]">
       <Box sx={{}}>
         <div className="flex justify-around items-center">
-          <NavLink to="/" style={({isActive}) => ({
-                backgroundColor: isActive ? "#72727299" : "",
-                color: isActive ? "black" : "",
+          <NavLink to="/"  style={({isActive}) => ({
+                backgroundColor: isActive ? "#920000" : "#333",
+                color: isActive ? "#fff" : "#fff",
+                borderRadius:"15px"
               })}>
-            <div className="flex flex-col">
+            <div className="flex flex-col ">
               <div>
-                <BottomNavigationAction icon={<WhatshotIcon />} />
+                <BottomNavigationAction style={{color:"white"}} icon={<WhatshotIcon />} />
               </div>
               <div className="text-center">Trending</div>
             </div>
           </NavLink>
           <NavLink to="/movies" style={({isActive}) => ({
-                backgroundColor: isActive ? "#72727299" : "",
-                color: isActive ? "black" : "",
+                backgroundColor: isActive ? "#920000" : "#333",
+                color: isActive ? "#fff" : "#fff",
+                borderRadius:"15px"
+              
               })}>
             <div
               
@@ -62,25 +65,27 @@ export default function SimpleBottomNavigation() {
               className="flex flex-col"
             >
               <div>
-                <BottomNavigationAction icon={<MovieIcon />} />
+                <BottomNavigationAction style={{color:"white"}} icon={<MovieIcon />} />
               </div> 
 
               <div className="text-center">Movies</div>
             </div>
           </NavLink >
           <NavLink style={({isActive}) => ({
-                backgroundColor: isActive ? "#72727299" : "",
-                color: isActive ? "black" : "",
+                backgroundColor: isActive ? "#920000" : "#333",
+                color: isActive ? "#fff" : "#fff",
+                borderRadius:"15px"
               })} to="/series">
-            <BottomNavigationAction icon={<TvIcon />} />
+            <BottomNavigationAction style={{color:"white"}} icon={<TvIcon />} />
             <div className="text-center">TV</div>
 
           </NavLink>
           <NavLink style={({isActive}) => ({
-                backgroundColor: isActive ? "#72727299" : "",
-                color: isActive ? "black" : "",
+                backgroundColor: isActive ? "#920000" : "#333",
+                color: isActive ? "#fff" : "#fff",
+                borderRadius:"15px"
               })} to="/search">
-            <BottomNavigationAction icon={<SearchIcon/>} />
+            <BottomNavigationAction style={{color:"white"}} icon={<SearchIcon/>} />
             <div className="text-center">Search</div>
           </NavLink>
         </div>

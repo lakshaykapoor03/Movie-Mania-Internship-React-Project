@@ -42,7 +42,7 @@ function Movies() {
 
   return( 
   <>
-  <div className="w-[100%] mx-[4%]">
+  <div className="w-[100%] bg-[#333333]">
       <div className="text-[white] text-[5vw] text-center">Movies</div>
       <Genre type="movie" selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} genres={genres} setGenres={setGenres} setPage={setPage} />
       <div className=" container mx-[auto] flex flex-wrap  justify-around w-[100%]">
