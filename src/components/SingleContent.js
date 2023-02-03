@@ -28,7 +28,7 @@ const SingleContent = ({
        </div>
         
         </div> */}
-        <div className="border-none rounded-[10px] sm: w-[225px]  md:w-[230px] md:h-[400px] lg:h-[400px] border-[2px] bg-[black] text-[white] text-center pt-[10px]   hover:bg-[white] duration-300 hover:text-[black]  ">
+        <div className="border-none rounded-[10px] sm: w-[225px]  md:w-[230px] md:h-[400px] lg:h-[400px] border-[2px] bg-[black] text-[white] text-center pt-[10px] transition ease-in-out delay-300  hover:-translate-y-1 hover:scale-110 hover:duration-600  hover:bg-[white] duration-300 hover:text-[black]  ">
           <Badge
             className="  ml-[200px] mb-[35px] md:ml-[200px] md:mb-[25px] "
             badgeContent={voteAverage}
