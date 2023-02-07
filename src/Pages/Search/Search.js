@@ -7,7 +7,6 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import SingleContent from '../../components/SingleContent';
 import axios from 'axios';
-import MovieComponent from "../../components/MovieComponent";
 import CustomPagination from "../../components/Pagination/CustomPagination";
 
 import { WidthWideOutlined } from '@mui/icons-material';

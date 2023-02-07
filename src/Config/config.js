@@ -13,3 +13,5 @@ export const unavailableLandscape =
 // For Carousel
 export const noPicture =
   "https://upload.wikimedia.org/wikipedia/en/6/60/No_Picture.jpg";
+
+  export const movieLogo= "https://i.pinimg.com/736x/ea/8d/11/ea8d11f1ffc6355b8a440106ce61d0f3.jpg"
